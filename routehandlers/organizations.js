@@ -11,6 +11,6 @@ const utils = require('../utils');
 module.exports = server => {
   return (request, reply) => {
     server.log('received GET /organizations request');
-    reply('Replied!');
+    reply('Heyooo!');
   };
 };
