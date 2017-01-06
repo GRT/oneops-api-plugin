@@ -3,12 +3,17 @@
  */
 'use strict';
 
-module.exports = function routes (server) {
-  // GET /account/organizations
-  server.route({
-    method: 'GET',
-    path: '/organizations.json',
-    config: {tags: ['api']},
-    handler: require('./routehandlers/organizations.js')(server)
-  });
+const routes = {
+  add: server => {
+    // GET /account/organizations
+    server.route({
+      method: 'GET',
+      path: '/organizations.json',
+      config: {tags: ['api']},
+      handler: require('./routehandlers/organizations.js')(server)
+    });
+  }
 };
+
+
+module.exports = routes;

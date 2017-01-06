@@ -5,9 +5,12 @@
 'use strict';
 
 // route handler for:
-// GET /account/organizationa
+// GET /account/organization
 const utils = require('../utils');
 
 module.exports = server => {
-  return (request, reply) => { };
+  return (request, reply) => {
+    server.log('received GET /organizations request');
+    reply('Replied!');
+  };
 };
