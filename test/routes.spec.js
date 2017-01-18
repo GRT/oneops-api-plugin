@@ -2,10 +2,10 @@
  * Created by Oakley Hall on 12/7/16.
  */
 const expect = require('chai').expect;
-const routes = require('../routes');
+const routes = require('../lib/routes');
 
 let checkConfig;
-const server = { route: config => { checkConfig = config } };
+const server = { route: config => { checkConfig = config; } };
 
 describe('Routes tests.', () => {
   it( 'should add an orgs route.', () => {

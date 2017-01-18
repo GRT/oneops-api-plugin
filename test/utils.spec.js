@@ -3,7 +3,7 @@
  */
 
 const expect = require('chai').expect;
-const utils = require('../utils');
+const utils = require('../lib/utils');
 
 describe('Utils tests.', () => {
   it( 'Age of now should be 0 ', () => {
