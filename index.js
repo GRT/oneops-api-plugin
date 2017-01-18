@@ -4,8 +4,12 @@
 'use strict';
 const routes = require('./lib/routes');
 
+const err = e => {
+  console.error(e);
+};
+
 exports.register = (server, options, next) => {
-  routes.add(server);
+  routes.add( err, server );
   next();
 };
 
